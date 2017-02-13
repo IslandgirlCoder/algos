@@ -29,24 +29,30 @@ int linearSearch(auto data, auto key)
  void bubbleSort(auto& Data) 
 {
 
+	bool swapped = true;
+	int passes = 0;
+	int temp;
 
-	for (int k = 1; k < Data.size(); k++)
+	while (swapped) 
 	{
+		swapped = false;
+		passes++;
 
-		for (int i = 0; i < Data.size() -1 -k; i++)
+		for (int k = 0; k < Data.size()-passes; k++)
 		{
-			
+
 			if (Data[i] > Data[i +1])
 			{
 		
-			//pre-defined swap function
-			swap(Data[i], Data[i + 1]); 
+				//swap values
+				temp = Data[i];
+				Data[i] = Data[i + 1];
+				Data[i + 1] = temp;
+				swapped = true;
 
-			} // end if function
-
-
-		}
-	}
+			}//end if
+		}// end for
+	}//end while
 }//end function
 
 
@@ -84,8 +90,6 @@ int main()
 
 	for (size_t n=0; n < inputs.size(); n++)
 	cout << inputs[n] << " " << endl;
-
-     
 
    cout<<endl<<"Program \"sort\" is now finished."<<endl<<endl;
 
