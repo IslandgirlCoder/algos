@@ -26,6 +26,30 @@ int linearSearch(auto data, auto key)
 	return -1;
 }
 
+ void bubbleSort(auto& Data) 
+{
+
+
+	for (int k = 1; k < Data.size(); k++)
+	{
+
+		for (int i = 0; i < Data.size() -1 -k; i++)
+		{
+			
+			if (Data[i] > Data[i +1])
+			{
+		
+			//pre-defined swap function
+			swap(Data[i], Data[i + 1]); 
+
+			} // end if function
+
+
+		}
+	}
+}//end function
+
+
 int main()
 {
   vector<string> inputs;
@@ -52,37 +76,16 @@ int main()
        exit(1);//nothing to do but quit program
   }
  
-   cout<<endl<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
-  cout<<"Enter a value to search for: ";
+  // cout<<endl<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
+  //cout<<"Enter a value to search for: ";
 
 
-   cin>>search_key;
- 
-    void bubbleSort(auto& Data) 
-{
+   bubbleSort(inputs);
 
+	for (size_t n=0; n < V.size(); n++)
+	cout << V[n] << " " << endl;
 
-	for (int k = 1; k < Data.size(); k++)
-	{
-
-		for (int i = 0; i < Data.size() -1 -k; i++)
-		{
-			
-			if (Data[i] > Data[i +1])
-			{
-		
-			//pre-defined swap function
-			swap(Data[i], Data[i + 1]); 
-
-			} // end if function
-
-
-}//end function
-
-
-        cout<<endl<<endl<<"Enter a value to search for: ";
-        cin>>search_key; 
-    }
+     
 
    cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
 
