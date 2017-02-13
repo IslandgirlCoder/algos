@@ -51,7 +51,11 @@ int linearSearch(auto data, auto key)
 				swapped = true;
 
 			}//end if
+
 		}// end for
+	
+		if (passes% 20000 == 0)	
+		cout << passes << endl;
 	}//end while
 }//end function
 
