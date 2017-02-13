@@ -82,12 +82,12 @@ int main()
 
    bubbleSort(inputs);
 
-	for (size_t n=0; n < V.size(); n++)
-	cout << V[n] << " " << endl;
+	for (size_t n=0; n < inputs.size(); n++)
+	cout << inputs[n] << " " << endl;
 
      
 
-   cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
+   cout<<endl<<"Program \"sort\" is now finished."<<endl<<endl;
 
     return 0;
 }
